@@ -1,0 +1,12 @@
+.header-fluid {
+    background-color: #5E4AE3;
+    height: 60px;
+}
+
+.app-title {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
