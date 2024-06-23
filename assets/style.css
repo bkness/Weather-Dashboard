@@ -10,3 +10,19 @@
     font-size: 2.5rem;
     color: #FFFFFF;
 }
+
+.search-btn {
+    padding: 7px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #5E4AE3;
+}
+
+.main-forecast-container {
+    border: 1px solid #5E4AE3;
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    height: 400px;
+}

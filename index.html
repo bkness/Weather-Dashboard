@@ -16,6 +16,64 @@
         <h1 class="app-title">Weather Dashboard</h1>
     </header>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="form-group text-uppercase">
+                    <label class="city-search" for="city-search">Search City</label>
+                    <input type="text" name="city-search" class="form-control text-uppercase" placeholder="Ex: Phoenix">
+                    <button id="searchBtn" class="search-btn">Search City</button>
+                </div>
+                <div id="savedSearches" class="saved-searches">
+                    <h5>Saved Searches</h5>
+                </div>
+            </div>
+            <div class="main-forecast-container col-lg-10">
+                <div id="mainForecast" class="main-forecast">
+                    <h3>Main Forecast</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="spacer col-md-2">
+                    <div class="p-2 mb-2">
+                        <h5>Space</h5>
+                        <!-- Forecast data for Day 1 -->
+                    </div>
+                </div>
+                <div class="daily-container col-md-2">
+                    <div class="border p-2 mb-2">
+                        <h5>Day 1</h5>
+                        <!-- Forecast data for Day 2 -->
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="daily-container border p-2 mb-2">
+                        <h5>Day 2</h5>
+                        <!-- Forecast data for Day 3 -->
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="daily-container border p-2 mb-2">
+                        <h5>Day 3</h5>
+                        <!-- Forecast data for Day 4 -->
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="daily-container border p-2 mb-2">
+                        <h5>Day 4</h5>
+                        <!-- Forecast data for Day 5 -->
+                    </div>
+                </div>
+                <div class="daily-container col-md-2">
+                    <div class="border p-2 mb-2">
+                        <h5>Day 5</h5>
+                        <!-- Forecast data for Day 5 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'));</script>
     <script src="./assets/script.js"></script>
 
