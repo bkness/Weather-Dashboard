@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     padding: 5px;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: #FFFFFF;
 }
 
@@ -22,7 +22,48 @@
 
 .main-forecast-container {
     border: 1px solid #5E4AE3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    margin: 20px 0 0 0;
-    height: 400px;
+    margin: 20px 0 25px 0;
+    height: 350px;
+}
+
+h3,
+h5 {
+    text-align: center;
+}
+
+.daily {
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.daily-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #5E4AE3;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+}
+
+.daily-container:hover {
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+   .daily {
+    margin: 0;
+    width: 100%;
+
+   }
 }
