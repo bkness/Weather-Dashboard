@@ -1,5 +1,13 @@
+:root {
+    --dark-blue: #0D2149;
+    --light-gray: #C1CAD6;
+    --ebony: #697268;
+    --white: #FFFFFF;
+    --black: #0C0C0C;
+}
+
 .header-fluid {
-    background-color: #5E4AE3;
+    background-color: var(--dark-blue);
     height: 60px;
 }
 
@@ -8,29 +16,58 @@
     justify-content: center;
     padding: 5px;
     font-size: 2.1rem;
-    color: #FFFFFF;
+    color: var(--white);
+}
+
+.form-group {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    color: var(--black);
 }
 
 .search-btn {
     padding: 7px;
-    margin-top: 10px;
+    margin: 10px 0 20px 0;
     width: 100%;
     border-radius: 10px;
-    color: #FFFFFF;
-    background-color: #5E4AE3;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    font-size: 1.4rem;
+}
+
+.saved-searches {
+    border-bottom: 4px solid var(--dark-blue);
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+.main-forecast {
+    color: var(--white);
+    margin-top: 10px;
 }
 
 .main-forecast-container {
-    border: 1px solid #5E4AE3;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--black);
+    background-color: var(--ebony);
+    box-shadow: 0 0 10px (0, 0, 0, 0.3);
     border-radius: 10px;
     margin: 20px 0 25px 0;
     height: 350px;
+    transition: transform 2s ease;
 }
 
-h3,
+.main-forecast-container:hover {
+    transform: scale(1.1);
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
 h5 {
     text-align: center;
+    font-size: 1.6rem;
 }
 
 .daily {
@@ -44,26 +81,27 @@ h5 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid #5E4AE3;
+    border: 1px solid var(--black);
+    background-color: var(--ebony);
+    color: var(--white);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-color: #FFFFFF;
     width: 100%;
     max-width: 300px;
-    height: 350px;
+    height: 300px;
+    transition: transform 2s ease;
 }
 
 .daily-container:hover {
-    background-color: #F1F1F1;
-    cursor: pointer;
+    transform: scale(1.6);
 }
 
 @media (max-width: 1200px) {
-   .daily {
-    margin: 0;
-    width: 100%;
+    .daily {
+        margin: 0;
+        width: 100%;
 
-   }
+    }
 }
