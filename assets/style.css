@@ -93,12 +93,12 @@ p {
     margin-bottom: 20px;
     width: 100%;
     max-width: 300px;
-    height: 300px;
+    height: 400px;
     transition: transform 2s ease;
 }
 
 .daily-container:hover {
-    transform: scale(1.6);
+    transform: scale(1.4);
 }
 
 @media (max-width: 1200px) {

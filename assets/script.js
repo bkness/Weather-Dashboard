@@ -1,4 +1,14 @@
 document.getElementById('searchBtn').addEventListener('click', function () {
+    submitSearch();
+});
+
+document.getElementById('cityInput').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        submitSearch();
+    }
+});
+
+function submitSearch() {
     var cityName = document.getElementById('cityInput').value;
     if (cityName) {
         fetchWeatherData(cityName);
@@ -6,8 +16,7 @@ document.getElementById('searchBtn').addEventListener('click', function () {
     } else {
         alert("Please enter a city name");
     }
-});
-
+}
 
 function fetchWeatherData(cityName) {
     var currentWeatherApi = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=3266c576b90d62fe56a4b62feab62ebd&units=imperial";
@@ -32,7 +41,6 @@ function fetchWeatherData(cityName) {
         .catch(function (error) {
             console.error('Error fetching current weather:', error);
         });
-
 }
 
 function fetchFiveDayForecast(cityName) {
@@ -69,9 +77,9 @@ function fetchFiveDayForecast(cityName) {
             for (var date in dailyData) {
                 if (dayIndex > 5) break;
                 var dayData = dailyData[date];
-                var avgTemp = (dayData.temp.reduce((a, b) => a + b, 0) / dayData.temp.length).toFixed(2);
-                var avgWind = (dayData.wind.reduce((a, b) => a + b, 0) / dayData.wind.length).toFixed(2);
-                var avgHumidity = (dayData.humidity.reduce((a, b) => a + b, 0) / dayData.humidity.length).toFixed(2);
+                var avgTemp = (dayData.temp.reduce((a, b) => a + b) / dayData.temp.length).toFixed(1);
+                var avgWind = (dayData.wind.reduce((a, b) => a + b) / dayData.wind.length).toFixed(1);
+                var avgHumidity = (dayData.humidity.reduce((a, b) => a + b) / dayData.humidity.length).toFixed(1);
                 var iconUrl = "http://openweathermap.org/img/w/" + dayData.icon + ".png";
 
                 document.getElementById(`day${dayIndex}CityNameDate`).textContent = dayjs(date).format('MMMM D, YYYY');
