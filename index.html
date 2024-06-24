@@ -20,8 +20,8 @@
         <div class="row">
             <div class="col-lg-2">
                 <div class="form-group text-uppercase">
-                    <label class="city-search" for="city-search">Search City</label>
-                    <input type="text" name="city-search" class="form-control text-uppercase" placeholder="Ex: Phoenix">
+                    <h3>Search City</h3>
+                    <input type="text" id="cityInput" class="form-control text-uppercase" placeholder="Ex: Phoenix">
                     <button id="searchBtn" class="btn btn-primary search-btn">Search City</button>
                 </div>
                 <div id="savedSearches" class="saved-searches">
@@ -32,12 +32,23 @@
                 <div class="main-forecast-container">
                     <div id="mainForecast" class="main-forecast">
                         <h3>Main Forecast</h3>
+                        <p id="currentCityNameDate"></p>
+                        <p id="currentTemp"></p>
+                        <p id="currentWindSpeed"></p>
+                        <p id="currentHumidity"></p>
+                        <p id="currentCondition"></p>
+                        <img class="condition-icon" id="conditionIcon" src="" alt="Weather Icon">
                     </div>
                 </div>
                 <div class="row">
                     <div class="daily col-lg-2 col-md-12 col-sm-12">
                         <div class="daily-container">
                             <h5>Day 1</h5>
+                            <p class="daily-date"></p>
+                            <p class="daily-temp"></p>
+                            <p class="daily-wind"></p>
+                            <p class="daily-humidity"></p>
+                            <img class="daily-icon" src="" alt="Weather Icon">
                         </div>
                     </div>
                     <div class="daily col-lg-2 col-md-12 col-sm-12">
